@@ -1,0 +1,18 @@
+[general]
+log_level=4
+password_hash_iterations=1000
+
+[postgresql]
+dsn="postgres://chirpstack_as:chirpstack_as@localhost/chirpstack_as?sslmode=disable"
+
+  [application_server.codec.js]
+  max_execution_time="200ms"
+
+  [application_server.integration]
+  enabled=["mqtt", "postgresql"]
+
+  [application_server.integration.postgresql]
+  dsn="postgres://chirpstack_as_events:dbpassword@localhost/chirpstack_as_events?sslmode=disable"
+
+  [application_server.external_api]
+  jwt_secret="verysecret"

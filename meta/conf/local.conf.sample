@@ -1,0 +1,25 @@
+# Leave this to 'chirpstack-gateway-os"
+DISTRO = "chirpstack-gateway-os"
+
+# Select the target machine.
+#
+# Options are (per vendor configured in bblayers.conf):
+#
+# Vendor: raspberrypi
+#         * raspberrypi3
+#
+# Vendor: wifx
+#         * lorix-one-512-sd
+#         * lorix-one-sd
+MACHINE = "lorix-one-512-sd"
+
+# Parallel executed tasks
+BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()*2}"
+PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()*2}"
+
+# Deploy dir
+#
+# This is the place where you will find the build artifacts.
+TMPDIR = "${TOPDIR}/tmp/${VENDOR}/${MACHINE}"
+DEPLOY_DIR = "${TMPDIR}/deploy/${DISTRO_VERSION}"
+DEPLOY_DIR_IMAGE = "${DEPLOY_DIR}/images"
