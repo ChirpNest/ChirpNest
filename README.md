@@ -244,7 +244,7 @@ $	sudo docker-compose run --rm busybox
 ```sh
     $	chown 999:999 /build
     $	exit
-$	sudo docker-compose run --rm yocto bash
+$ sudo docker-compose run --rm yocto bash
     $	source oe-init-build-env /build/ /chirpstack-gateway-os/bitbake/
 ``` 
    The configurations should already be correct. However, if a configuration needs to be edited, now is the moment to do that. 
@@ -258,8 +258,8 @@ $	sudo docker-compose run --rm yocto bash
 ```
    Continue:
 ```sh
-$	/chirpstack-gateway-os/scripts/chirpstack-prepare-deploy
-$	exit
+    $	/chirpstack-gateway-os/scripts/chirpstack-prepare-deploy
+    $	exit
 ```
 Now, the file ending with .sdimg.gz is the image file. It’s located here:
 ```sh
