@@ -9,13 +9,14 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
+<!--
+*** [![Contributors][contributors-shield]][contributors-url]
+*** [![Forks][forks-shield]][forks-url]
+*** [![Stargazers][stars-shield]][stars-url]
+*** [![Issues][issues-shield]][issues-url]
+*** [![MIT License][license-shield]][license-url]
+*** [![LinkedIn][linkedin-shield]][linkedin-url]
+-->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -46,11 +47,9 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -259,19 +258,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
+Project Link: [https://github.com/ChirpNest/ChirpNest](https://github.com/ChirpNest/ChirpNest)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
+<!--
 * []()
 * []()
 * []()
-
+-->
 
 
 
