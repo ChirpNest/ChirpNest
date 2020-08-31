@@ -227,6 +227,46 @@ The actual function is in the file “PayloadDecoderFunction.js”.
 
 Important: ChirpStack required another function signature than The Things Network. For this reason, function Decoder(bytes, port) has to be changed to function Decoder(port, bytes).
 
+#### Create ChirpNest Image
+
+Navigate to the folder where the repository should be created and clone it:
+
+```sh
+$	git clone https://github.com/ChirpNest/ChirpNest
+```
+Run the following commands:
+```sh
+$	make submodules
+$	make permissions
+$	sudo docker-compose run --rm busybox
+```
+(indented commands are to be run within the docker machine)
+```sh
+    $	chown 999:999 /build
+    $	exit
+$	sudo docker-compose run --rm yocto bash
+    $	source oe-init-build-env /build/ /chirpstack-gateway-os/bitbake/
+``` 
+   The configurations should already be correct. However, if a configuration needs to be edited, now is the moment to do that. 
+```sh
+    $	nano conf/local.conf
+    $	nano conf/bblayers.conf
+```
+   Run the following command to start creating the image:
+```sh
+    $	bitbake chirpstack-gateway-os-full
+```
+   Continue:
+```sh
+$	/chirpstack-gateway-os/scripts/chirpstack-prepare-deploy
+$	exit
+```
+Now, the file ending with .sdimg.gz is the image file. It’s located here:
+```sh
+$	ls -l ./deploy/wifx/lorix-one-512-sd/3.2.0test1/
+```
+
+
 
 <!-- ROADMAP -->
 ## Roadmap
