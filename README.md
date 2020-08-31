@@ -84,17 +84,17 @@ Follow this guide to set up and start with ChirpNest
 
 ### Prerequisites
 
-- LORIX One with power over ethernet cable
-- Power supply
-- SD card (minimum 8 GB, 10 MB/s writing speed or more recommended)
-- ChirpNest image file for LORIX One
-- ADT1 device
-- Windows computer
- - SD card reader
- - Browser
- - SSH client
-- Flashing software (e.g. balenaEtcher from balena.io/etcher)
-- Local network that allows communication between the computer and the LORIX One
+* LORIX One with power over ethernet cable
+* Power supply
+* SD card (minimum 8 GB, 10 MB/s writing speed or more recommended)
+* ChirpNest image file for LORIX One
+* ADT1 device
+* Windows computer
+  * SD card reader
+  * Browser
+  * SSH client
+* Flashing software (e.g. balenaEtcher from balena.io/etcher)
+* Local network that allows communication between the computer and the LORIX One
 
 ### Installation
 
@@ -142,68 +142,68 @@ Password: “admin”
 
 Navigate to “Network-servers”, click the “+ Add” button, enter the following data and click “Add network-server”:
 
-- General
- - Network-server name: “ChirpNest-Network-Server”
- - Network-server server: “localhost:8000”
-- Gateway discovery
- - leave all fields unchanged
-- TLS certificates
- -leave all fields unchanged
+* General
+  * Network-server name: “ChirpNest-Network-Server”
+  * Network-server server: “localhost:8000”
+* Gateway discovery
+  * leave all fields unchanged
+* TLS certificates
+  * leave all fields unchanged
 
 Navigate to “Service-profiles”, click the “+ Create” button, enter the following data and click “Create service-profile”:
-- Service-profile name: “ChirpNest-Service-Profile”
-- Network-server: select “ChirpNest-Network-Server”
-- remaining fields: leave unchanged
+* Service-profile name: “ChirpNest-Service-Profile”
+* Network-server: select “ChirpNest-Network-Server”
+* remaining fields: leave unchanged
 
 Navigate to “Device-profiles”, click the “+ Create” button, enter the following data and click “Create device-profile” (the following parameters are chosen specifically for and tested with the ADT1; using OTAA instead of ABP should also be possible):
-- General
- - Device-profile name: “device_profile_1.0.2_B_abp_ADT1”
- - Network-server: select “ChirpNest-Network-Server”
- - LoRaWAN MAC version: select “1.0.2”
- - LoRaWAN Regional Parameters revision: select “B”
- - remaining fields: leave unchanged
-- Join (OTAA / ABP)
- - leave all fields unchanged
-- Class-B
- - leave all fields unchanged
-- Class-C
- - leave all fields unchanged
-- Codec
- - Payload codec: select “Custom JavaScript codec functions”
- - Decode function:
+* General
+  * Device-profile name: “device_profile_1.0.2_B_abp_ADT1”
+  * Network-server: select “ChirpNest-Network-Server”
+  * LoRaWAN MAC version: select “1.0.2”
+  * LoRaWAN Regional Parameters revision: select “B”
+  * remaining fields: leave unchanged
+* Join (OTAA / ABP)
+  * leave all fields unchanged
+* Class-B
+  * leave all fields unchanged
+* Class-C
+  * leave all fields unchanged
+* Codec
+  * Payload codec: select “Custom JavaScript codec functions”
+  * Decode function:
 paste the decode function, see “Decode function for ADT1” on page 119
 make sure the function signature is function Decoder(port, bytes)
-•	Encode function:
+* Encode function:
 leave unchanged
 
 Navigate to “Applications”, click the “+ Create” button, enter the following data and click “Create application”:
-- Application name: “ChirpNest-Application”
-- Application description:
+* Application name: “ChirpNest-Application”
+* Application description:
 “This is the single application configured on this ChirpNest environment.”
-- Service-profile: select “ChirpNest-Service-Profile”
+* Service-profile: select “ChirpNest-Service-Profile”
 
 Navigate to “Applications”, select the single existing application “ChirpNest-Application” (click on the name) which navigates to the “Devices” tab of that application, then click the “+ Create” button, enter the following data and click “Create device”:
 
-- General
- - Device name: enter any name consisting of letters, numbers and hyphens (e.g. “ADT1­No­92” where 92 is the serial number)
- - Device description: enter any description (e.g. “ADT1 with serial number 92”)
- - Device EUI: enter the device EUI of your device (e.g. “00 9D 6B 00 00 C5 D2 4F”)
- - Device-profile: select “device_profile_1.0.2_B_abp_ADT1”
- - Disable frame-counter validation: check
-- Variables
- - leave unchanged
- -	Tags
-- leave unchanged
+* General
+  * Device name: enter any name consisting of letters, numbers and hyphens (e.g. “ADT1­No­92” where 92 is the serial number)
+  * Device description: enter any description (e.g. “ADT1 with serial number 92”)
+  * Device EUI: enter the device EUI of your device (e.g. “00 9D 6B 00 00 C5 D2 4F”)
+  * Device-profile: select “device_profile_1.0.2_B_abp_ADT1”
+  * Disable frame-counter validation: check
+* Variables
+  * leave unchanged
+  *	Tags
+* leave unchanged
 
 Navigate to “Applications”, select the single existing application “ChirpNest-Application” (click on the name) which navigates to the “Devices” tab of that application, select the single existing device just created before (click on the name), switch to the “Activation” tab, enter the following data and click “(Re)activate device”:
-- Device address:
+* Device address:
 enter the device address of your device (e.g. “26 01 16 83”) or click the round arrow to generate a new device address which must then be configured on the ADT1
-- Network session key (LoRaWAN 1.0):
+* Network session key (LoRaWAN 1.0):
 enter the network session key of your device (e.g. “E6 19 A5 8F 1F 1F 84 F2 C3 0B 2E EA 1E 1F B4 7D”) or click the round arrow to generate a new network session key which must then be configured on the ADT1
-- Application session key (LoRaWAN 1.0):
+* Application session key (LoRaWAN 1.0):
 enter the application session key of your device (e.g. “F5 32 68 0E C0 4C C4 95 7D AA FC 5E 34 CC 6E 35”) or click the round arrow to generate a new application session key which must then be configured on the ADT1
-- Uplink frame-counter: leave “0”
-- Downlink frame-counter: leave “0”
+* Uplink frame-counter: leave “0”
+* Downlink frame-counter: leave “0”
 
 Now the ADT1 is configured and activated. You can verify by opening the “Device data” tab on your newly created device configuration and then sending a measurement packet (see “Configure ADT1 Device” below). Note that the “Device data” tab must be opened before the measurement is sent.
 
