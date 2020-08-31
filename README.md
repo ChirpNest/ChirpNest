@@ -62,20 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`
-
-
-### Built With
-
-* []()
-* []()
-* []()
-
-
+[TODO]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -233,9 +220,12 @@ To manually trigger sending a measurement packet, the button “Send Measure-Dat
 
 #### Decode function for ADT1
 The decode function is provided by KELLER in a GitHub repository.
+
 Follow this URL:
 https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder
+
 The actual function is in the file “PayloadDecoderFunction.js”.
+
 Important: ChirpStack required another function signature than The Things Network. For this reason, function Decoder(bytes, port) has to be changed to function Decoder(port, bytes).
 
 
