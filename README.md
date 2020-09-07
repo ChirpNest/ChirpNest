@@ -257,7 +257,7 @@ Important: ChirpStack required another function signature than "The Things Netwo
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/ChirpNest/ChirpNest/blob/master/LICENSE) for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
