@@ -33,7 +33,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![ChirpNestIntro](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNestIntroSmall.gif)
+[![Intro](http://img.youtube.com/vi/TjCiR6i7mAU/0.jpg)](https://www.youtube.com/watch?v=TjCiR6i7mAU "Intro")
 
 [TODO]
 
