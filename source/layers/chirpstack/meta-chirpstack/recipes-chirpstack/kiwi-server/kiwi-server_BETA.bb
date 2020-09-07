@@ -4,7 +4,7 @@ PRIORITY = "optional"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 SRC_URI = " \
-    http://egger.one/artifact-downloads/kiwi-server/kiwi-server_2020-06-04_11-23_linux_arm_7.tar.gz \
+    http://www.keller-druck2.ch/swupdate/ChirpNest/kiwi-server_2020-06-04_11-23_linux_arm_7.tar.gz \
     file://kiwi-server.init \
     file://kiwi-server.monit \
     file://kiwi-server.toml \

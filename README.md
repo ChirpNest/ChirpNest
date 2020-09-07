@@ -1,46 +1,25 @@
 # ChirpNest
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<!--
-*** [![Contributors][contributors-shield]][contributors-url]
-*** [![Forks][forks-shield]][forks-url]
-*** [![Stargazers][stars-shield]][stars-url]
-*** [![Issues][issues-shield]][issues-url]
-*** [![MIT License][license-shield]][license-url]
-*** [![LinkedIn][linkedin-shield]][linkedin-url]
--->
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/ChirpNest/ChirpNest">
-    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpg" alt="Logo" width="100" height="112">
   </a>
 
   <h3 align="center">ChirpNest</h3>
 
   <p align="center">
-    The internetless Iot solution
+    The internet-less solution for LoRaWAN devices
     <br />
-    <a href="https://github.com/ChirpNest/ChirpNest"><strong>Explore the docs »</strong></a>
+    ![ChirpNestIntro Gif (60MB)](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNestIntroSmall.gif)
     <br />
     <br />
-    <a href="https://github.com/ChirpNest/ChirpNest">View Demo</a>
-    ·
     <a href="https://github.com/ChirpNest/ChirpNest/issues">Report Bug</a>
     ·
     <a href="https://github.com/ChirpNest/ChirpNest/issues">Request Feature</a>
   </p>
 </p>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -50,9 +29,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -68,14 +44,16 @@
 
 Follow this guide to set up and start with ChirpNest
 
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0dldCBwcmVwYXJlZCBDaGlycE5lc3QgaW1hZ2VdIC0tPiBCKFByZXBhcmUgdGhlIExPUklYIE9uZSBkZXZpY2UpXG4gICAgQiAtLT4gQyhJbml0aWFsIHNldHVwIExPUklYIE9uZSB3aXRoPGJyPnRoZSBDaGlycFN0YWNrIFdlYiBpbnRlcmZhY2UpXG4gICAgQyAtLT4gRChDb25maWd1cmUgQ2hpcnBOZXN0IHdpdGggdGhlPGJyPkNoaXJwU3RhY2sgV2ViIEludGVyZmFjZSlcbiAgICBEIC0tPiBFKENvbm5lY3QgS0lXSSBEZXNrdG9wIHdpdGggQ2hpcnBOZXN0KVxuXG4gICAgc3ViZ3JhcGggaWRlMSBbQnVpbGQgeW91ciBvd24gQ2hpcnBOZXN0IGltYWdlXVxuICAgIGExKENyZWF0ZSBDaGlycE5lc3QgSW1hZ2UpLS0-YTIoVXNlIHByZXBhcmVkICdLSVdJIFNlcnZlcicgbW9kdWxlKVxuICAgIGVuZFxuICAgIGEyIC0tPiBCXG5cbiAgICBzdWJncmFwaCBpZGUyIFtCdWlsZCB5b3VyIG93biAnS0lXSSBTZXJ2ZXInIG1vZHVsZV1cbiAgICBhMShCdWlsZCBDaGlycE5lc3QgSW1hZ2UpLS0-YTIyKEJ1aWxkICdLSVdJIFNlcnZlcicgbW9kdWxlKVxuICAgIGVuZFxuICAgIGEyMiAtLT4gQiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0IiwidGhlbWVWYXJpYWJsZXMiOnsiYmFja2dyb3VuZCI6IndoaXRlIiwicHJpbWFyeUNvbG9yIjoiI0VDRUNGRiIsInNlY29uZGFyeUNvbG9yIjoiI2ZmZmZkZSIsInRlcnRpYXJ5Q29sb3IiOiJoc2woODAsIDEwMCUsIDk2LjI3NDUwOTgwMzklKSIsInByaW1hcnlCb3JkZXJDb2xvciI6ImhzbCgyNDAsIDYwJSwgODYuMjc0NTA5ODAzOSUpIiwic2Vjb25kYXJ5Qm9yZGVyQ29sb3IiOiJoc2woNjAsIDYwJSwgODMuNTI5NDExNzY0NyUpIiwidGVydGlhcnlCb3JkZXJDb2xvciI6ImhzbCg4MCwgNjAlLCA4Ni4yNzQ1MDk4MDM5JSkiLCJwcmltYXJ5VGV4dENvbG9yIjoiIzEzMTMwMCIsInNlY29uZGFyeVRleHRDb2xvciI6IiMwMDAwMjEiLCJ0ZXJ0aWFyeVRleHRDb2xvciI6InJnYig5LjUwMDAwMDAwMDEsIDkuNTAwMDAwMDAwMSwgOS41MDAwMDAwMDAxKSIsImxpbmVDb2xvciI6IiMzMzMzMzMiLCJ0ZXh0Q29sb3IiOiIjMzMzIiwibWFpbkJrZyI6IiNFQ0VDRkYiLCJzZWNvbmRCa2ciOiIjZmZmZmRlIiwiYm9yZGVyMSI6IiM5MzcwREIiLCJib3JkZXIyIjoiI2FhYWEzMyIsImFycm93aGVhZENvbG9yIjoiIzMzMzMzMyIsImZvbnRGYW1pbHkiOiJcInRyZWJ1Y2hldCBtc1wiLCB2ZXJkYW5hLCBhcmlhbCIsImZvbnRTaXplIjoiMTZweCIsImxhYmVsQmFja2dyb3VuZCI6IiNlOGU4ZTgiLCJub2RlQmtnIjoiI0VDRUNGRiIsIm5vZGVCb3JkZXIiOiIjOTM3MERCIiwiY2x1c3RlckJrZyI6IiNmZmZmZGUiLCJjbHVzdGVyQm9yZGVyIjoiI2FhYWEzMyIsImRlZmF1bHRMaW5rQ29sb3IiOiIjMzMzMzMzIiwidGl0bGVDb2xvciI6IiMzMzMiLCJlZGdlTGFiZWxCYWNrZ3JvdW5kIjoiI2U4ZThlOCIsImFjdG9yQm9yZGVyIjoiaHNsKDI1OS42MjYxNjgyMjQzLCA1OS43NzY1MzYzMTI4JSwgODcuOTAxOTYwNzg0MyUpIiwiYWN0b3JCa2ciOiIjRUNFQ0ZGIiwiYWN0b3JUZXh0Q29sb3IiOiJibGFjayIsImFjdG9yTGluZUNvbG9yIjoiZ3JleSIsInNpZ25hbENvbG9yIjoiIzMzMyIsInNpZ25hbFRleHRDb2xvciI6IiMzMzMiLCJsYWJlbEJveEJrZ0NvbG9yIjoiI0VDRUNGRiIsImxhYmVsQm94Qm9yZGVyQ29sb3IiOiJoc2woMjU5LjYyNjE2ODIyNDMsIDU5Ljc3NjUzNjMxMjglLCA4Ny45MDE5NjA3ODQzJSkiLCJsYWJlbFRleHRDb2xvciI6ImJsYWNrIiwibG9vcFRleHRDb2xvciI6ImJsYWNrIiwibm90ZUJvcmRlckNvbG9yIjoiI2FhYWEzMyIsIm5vdGVCa2dDb2xvciI6IiNmZmY1YWQiLCJub3RlVGV4dENvbG9yIjoiYmxhY2siLCJhY3RpdmF0aW9uQm9yZGVyQ29sb3IiOiIjNjY2IiwiYWN0aXZhdGlvbkJrZ0NvbG9yIjoiI2Y0ZjRmNCIsInNlcXVlbmNlTnVtYmVyQ29sb3IiOiJ3aGl0ZSIsInNlY3Rpb25Ca2dDb2xvciI6InJnYmEoMTAyLCAxMDIsIDI1NSwgMC40OSkiLCJhbHRTZWN0aW9uQmtnQ29sb3IiOiJ3aGl0ZSIsInNlY3Rpb25Ca2dDb2xvcjIiOiIjZmZmNDAwIiwidGFza0JvcmRlckNvbG9yIjoiIzUzNGZiYyIsInRhc2tCa2dDb2xvciI6IiM4YTkwZGQiLCJ0YXNrVGV4dExpZ2h0Q29sb3IiOiJ3aGl0ZSIsInRhc2tUZXh0Q29sb3IiOiJ3aGl0ZSIsInRhc2tUZXh0RGFya0NvbG9yIjoiYmxhY2siLCJ0YXNrVGV4dE91dHNpZGVDb2xvciI6ImJsYWNrIiwidGFza1RleHRDbGlja2FibGVDb2xvciI6IiMwMDMxNjMiLCJhY3RpdmVUYXNrQm9yZGVyQ29sb3IiOiIjNTM0ZmJjIiwiYWN0aXZlVGFza0JrZ0NvbG9yIjoiI2JmYzdmZiIsImdyaWRDb2xvciI6ImxpZ2h0Z3JleSIsImRvbmVUYXNrQmtnQ29sb3IiOiJsaWdodGdyZXkiLCJkb25lVGFza0JvcmRlckNvbG9yIjoiZ3JleSIsImNyaXRCb3JkZXJDb2xvciI6IiNmZjg4ODgiLCJjcml0QmtnQ29sb3IiOiJyZWQiLCJ0b2RheUxpbmVDb2xvciI6InJlZCIsImxhYmVsQ29sb3IiOiJibGFjayIsImVycm9yQmtnQ29sb3IiOiIjNTUyMjIyIiwiZXJyb3JUZXh0Q29sb3IiOiIjNTUyMjIyIiwiY2xhc3NUZXh0IjoiIzEzMTMwMCIsImZpbGxUeXBlMCI6IiNFQ0VDRkYiLCJmaWxsVHlwZTEiOiIjZmZmZmRlIiwiZmlsbFR5cGUyIjoiaHNsKDMwNCwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGUzIjoiaHNsKDEyNCwgMTAwJSwgOTMuNTI5NDExNzY0NyUpIiwiZmlsbFR5cGU0IjoiaHNsKDE3NiwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGU1IjoiaHNsKC00LCAxMDAlLCA5My41Mjk0MTE3NjQ3JSkiLCJmaWxsVHlwZTYiOiJoc2woOCwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGU3IjoiaHNsKDE4OCwgMTAwJSwgOTMuNTI5NDExNzY0NyUpIn19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0dldCBwcmVwYXJlZCBDaGlycE5lc3QgaW1hZ2VdIC0tPiBCKFByZXBhcmUgdGhlIExPUklYIE9uZSBkZXZpY2UpXG4gICAgQiAtLT4gQyhJbml0aWFsIHNldHVwIExPUklYIE9uZSB3aXRoPGJyPnRoZSBDaGlycFN0YWNrIFdlYiBpbnRlcmZhY2UpXG4gICAgQyAtLT4gRChDb25maWd1cmUgQ2hpcnBOZXN0IHdpdGggdGhlPGJyPkNoaXJwU3RhY2sgV2ViIEludGVyZmFjZSlcbiAgICBEIC0tPiBFKENvbm5lY3QgS0lXSSBEZXNrdG9wIHdpdGggQ2hpcnBOZXN0KVxuXG4gICAgc3ViZ3JhcGggaWRlMSBbQnVpbGQgeW91ciBvd24gQ2hpcnBOZXN0IGltYWdlXVxuICAgIGExKENyZWF0ZSBDaGlycE5lc3QgSW1hZ2UpLS0-YTIoVXNlIHByZXBhcmVkICdLSVdJIFNlcnZlcicgbW9kdWxlKVxuICAgIGVuZFxuICAgIGEyIC0tPiBCXG5cbiAgICBzdWJncmFwaCBpZGUyIFtCdWlsZCB5b3VyIG93biAnS0lXSSBTZXJ2ZXInIG1vZHVsZV1cbiAgICBhMShCdWlsZCBDaGlycE5lc3QgSW1hZ2UpLS0-YTIyKEJ1aWxkICdLSVdJIFNlcnZlcicgbW9kdWxlKVxuICAgIGVuZFxuICAgIGEyMiAtLT4gQiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0IiwidGhlbWVWYXJpYWJsZXMiOnsiYmFja2dyb3VuZCI6IndoaXRlIiwicHJpbWFyeUNvbG9yIjoiI0VDRUNGRiIsInNlY29uZGFyeUNvbG9yIjoiI2ZmZmZkZSIsInRlcnRpYXJ5Q29sb3IiOiJoc2woODAsIDEwMCUsIDk2LjI3NDUwOTgwMzklKSIsInByaW1hcnlCb3JkZXJDb2xvciI6ImhzbCgyNDAsIDYwJSwgODYuMjc0NTA5ODAzOSUpIiwic2Vjb25kYXJ5Qm9yZGVyQ29sb3IiOiJoc2woNjAsIDYwJSwgODMuNTI5NDExNzY0NyUpIiwidGVydGlhcnlCb3JkZXJDb2xvciI6ImhzbCg4MCwgNjAlLCA4Ni4yNzQ1MDk4MDM5JSkiLCJwcmltYXJ5VGV4dENvbG9yIjoiIzEzMTMwMCIsInNlY29uZGFyeVRleHRDb2xvciI6IiMwMDAwMjEiLCJ0ZXJ0aWFyeVRleHRDb2xvciI6InJnYig5LjUwMDAwMDAwMDEsIDkuNTAwMDAwMDAwMSwgOS41MDAwMDAwMDAxKSIsImxpbmVDb2xvciI6IiMzMzMzMzMiLCJ0ZXh0Q29sb3IiOiIjMzMzIiwibWFpbkJrZyI6IiNFQ0VDRkYiLCJzZWNvbmRCa2ciOiIjZmZmZmRlIiwiYm9yZGVyMSI6IiM5MzcwREIiLCJib3JkZXIyIjoiI2FhYWEzMyIsImFycm93aGVhZENvbG9yIjoiIzMzMzMzMyIsImZvbnRGYW1pbHkiOiJcInRyZWJ1Y2hldCBtc1wiLCB2ZXJkYW5hLCBhcmlhbCIsImZvbnRTaXplIjoiMTZweCIsImxhYmVsQmFja2dyb3VuZCI6IiNlOGU4ZTgiLCJub2RlQmtnIjoiI0VDRUNGRiIsIm5vZGVCb3JkZXIiOiIjOTM3MERCIiwiY2x1c3RlckJrZyI6IiNmZmZmZGUiLCJjbHVzdGVyQm9yZGVyIjoiI2FhYWEzMyIsImRlZmF1bHRMaW5rQ29sb3IiOiIjMzMzMzMzIiwidGl0bGVDb2xvciI6IiMzMzMiLCJlZGdlTGFiZWxCYWNrZ3JvdW5kIjoiI2U4ZThlOCIsImFjdG9yQm9yZGVyIjoiaHNsKDI1OS42MjYxNjgyMjQzLCA1OS43NzY1MzYzMTI4JSwgODcuOTAxOTYwNzg0MyUpIiwiYWN0b3JCa2ciOiIjRUNFQ0ZGIiwiYWN0b3JUZXh0Q29sb3IiOiJibGFjayIsImFjdG9yTGluZUNvbG9yIjoiZ3JleSIsInNpZ25hbENvbG9yIjoiIzMzMyIsInNpZ25hbFRleHRDb2xvciI6IiMzMzMiLCJsYWJlbEJveEJrZ0NvbG9yIjoiI0VDRUNGRiIsImxhYmVsQm94Qm9yZGVyQ29sb3IiOiJoc2woMjU5LjYyNjE2ODIyNDMsIDU5Ljc3NjUzNjMxMjglLCA4Ny45MDE5NjA3ODQzJSkiLCJsYWJlbFRleHRDb2xvciI6ImJsYWNrIiwibG9vcFRleHRDb2xvciI6ImJsYWNrIiwibm90ZUJvcmRlckNvbG9yIjoiI2FhYWEzMyIsIm5vdGVCa2dDb2xvciI6IiNmZmY1YWQiLCJub3RlVGV4dENvbG9yIjoiYmxhY2siLCJhY3RpdmF0aW9uQm9yZGVyQ29sb3IiOiIjNjY2IiwiYWN0aXZhdGlvbkJrZ0NvbG9yIjoiI2Y0ZjRmNCIsInNlcXVlbmNlTnVtYmVyQ29sb3IiOiJ3aGl0ZSIsInNlY3Rpb25Ca2dDb2xvciI6InJnYmEoMTAyLCAxMDIsIDI1NSwgMC40OSkiLCJhbHRTZWN0aW9uQmtnQ29sb3IiOiJ3aGl0ZSIsInNlY3Rpb25Ca2dDb2xvcjIiOiIjZmZmNDAwIiwidGFza0JvcmRlckNvbG9yIjoiIzUzNGZiYyIsInRhc2tCa2dDb2xvciI6IiM4YTkwZGQiLCJ0YXNrVGV4dExpZ2h0Q29sb3IiOiJ3aGl0ZSIsInRhc2tUZXh0Q29sb3IiOiJ3aGl0ZSIsInRhc2tUZXh0RGFya0NvbG9yIjoiYmxhY2siLCJ0YXNrVGV4dE91dHNpZGVDb2xvciI6ImJsYWNrIiwidGFza1RleHRDbGlja2FibGVDb2xvciI6IiMwMDMxNjMiLCJhY3RpdmVUYXNrQm9yZGVyQ29sb3IiOiIjNTM0ZmJjIiwiYWN0aXZlVGFza0JrZ0NvbG9yIjoiI2JmYzdmZiIsImdyaWRDb2xvciI6ImxpZ2h0Z3JleSIsImRvbmVUYXNrQmtnQ29sb3IiOiJsaWdodGdyZXkiLCJkb25lVGFza0JvcmRlckNvbG9yIjoiZ3JleSIsImNyaXRCb3JkZXJDb2xvciI6IiNmZjg4ODgiLCJjcml0QmtnQ29sb3IiOiJyZWQiLCJ0b2RheUxpbmVDb2xvciI6InJlZCIsImxhYmVsQ29sb3IiOiJibGFjayIsImVycm9yQmtnQ29sb3IiOiIjNTUyMjIyIiwiZXJyb3JUZXh0Q29sb3IiOiIjNTUyMjIyIiwiY2xhc3NUZXh0IjoiIzEzMTMwMCIsImZpbGxUeXBlMCI6IiNFQ0VDRkYiLCJmaWxsVHlwZTEiOiIjZmZmZmRlIiwiZmlsbFR5cGUyIjoiaHNsKDMwNCwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGUzIjoiaHNsKDEyNCwgMTAwJSwgOTMuNTI5NDExNzY0NyUpIiwiZmlsbFR5cGU0IjoiaHNsKDE3NiwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGU1IjoiaHNsKC00LCAxMDAlLCA5My41Mjk0MTE3NjQ3JSkiLCJmaWxsVHlwZTYiOiJoc2woOCwgMTAwJSwgOTYuMjc0NTA5ODAzOSUpIiwiZmlsbFR5cGU3IjoiaHNsKDE4OCwgMTAwJSwgOTMuNTI5NDExNzY0NyUpIn19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
 ### Prerequisites
 
-* LORIX One with power over ethernet cable
-* Power supply
+* LORIX One with power over ethernet cable (See https://www.lorixone.io/)
+  * Power supply
 * SD card (minimum 8 GB, 10 MB/s writing speed or more recommended)
-* ChirpNest image file for LORIX One
-* ADT1 device
-* Windows computer
+* ChirpNest image file for LORIX One (See **TODO**)
+* KELLER's [ADT1-Tube](https://keller-druck.com/en/products/data-loggers/remote-transmission-units-with-data-logger/adt1-tube) or [ADT1-Box](https://keller-druck.com/en/products/data-loggers/remote-transmission-units-with-data-logger/adt1-box) LoRaWAN device with sensor/s attached
+* Computer with
   * SD card reader
   * Browser
   * SSH client
@@ -85,10 +63,10 @@ Follow this guide to set up and start with ChirpNest
 ### Installation
 
 #### Prepare the LORIX One device
-Insert the SD card into the Windows computer and flash the ChirpNest image onto it using the third-party flashing software.
+Insert the SD card into the computer and flash the ChirpNest image onto it using the third-party flashing software.
 Connect the LORIX One to the local network, put the SD card into the LORIX One and power it.
 
-#### Configure ChirpNest via SSH
+#### Initial setup LORIX One via SSH
 Discover the IP address of the LORIX One e.g. through a web interface on the router.
 Connect to the LORIX One using an SSH client.
 Username: “admin”
@@ -205,27 +183,25 @@ https://keller-druck.com/en/products/software/desktop-applications/gsm-setup-for
 Connect the ADT1 device to the Windows computer using a Micro USB cable.
 Select the corresponding COM port and press the “Read Configuration” button (see screenshot).
 
-[TODO: Add GSM Setup screentshot]
+![press the “Read Configuration” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-01.jpg "press the “Read Configuration” button")
 
 To read out or configure said parameters, switch to the “LoRa Settings” tab. The parameters are then displayed (see screenshot). To configure the parameters, select “ABP” as “Activation Methode” and enter the parameters. Press the “Write Configuration” button after entering the parameters.
 
-[TODO: Add GSM Setup screentshot]
+![Press the “Write Configuration” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-02.jpg "Press the “Write Configuration” button")
 
 To send the information packet from the ADT1 device, switch to the “Error/Status” tab and press the “Send Info LoRa” button (see screenshot).
 
-[TODO: Add GSM Setup screentshot]
+![press the “Send Info LoRa” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-03.jpg "press the “Send Info LoRa” button")
 
 To manually trigger sending a measurement packet, the button “Send Measure-Data LoRa” can be pressed.
 
 #### Decode function for ADT1
-The decode function is provided by KELLER in a GitHub repository.
+The decode function is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).
 
 Follow this URL:
-https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder
+https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js
 
-The actual function is in the file “PayloadDecoderFunction.js”.
-
-Important: ChirpStack required another function signature than The Things Network. For this reason, function Decoder(bytes, port) has to be changed to function Decoder(port, bytes).
+Important: ChirpStack required another function signature than "The Things Network". For this reason, function Decoder(bytes, **port**) has to be changed to function Decoder(**port**, bytes).
 
 #### Create ChirpNest Image
 
@@ -266,48 +242,18 @@ Now, the file ending with .sdimg.gz is the image file. It’s located here:
 $	ls -l ./deploy/wifx/lorix-one-512-sd/3.2.0test1/
 ```
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Project Link: [https://github.com/ChirpNest/ChirpNest](https://github.com/ChirpNest/ChirpNest)
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-<!--
-* []()
-* []()
-* []()
--->
+* [Orne Brocaar](https://github.com/brocaar) built [ChirpStack](https://github.com/brocaar/chirpstack-network-server) which is a core component of ChirpNest
+* [Ecoliat](https://github.com/Ecoliat) - Co-author and developer of the ChirpNest diploma thesis
+* [LukasRas](https://github.com/LukasRas) - Co-author and developer of the ChirpNest diploma thesis
 
 
 
