@@ -4,15 +4,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/ChirpNest/ChirpNest">
-    <img src="images/logo.jpg" alt="Logo" width="100" height="112">
+    <img src="logo.jpg" alt="Logo" width="100" height="112">
   </a>
 
   <h3 align="center">ChirpNest</h3>
 
   <p align="center">
     The internet-less solution for LoRaWAN devices
-    <br />
-    ![ChirpNestIntro Gif (60MB)](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNestIntroSmall.gif)
     <br />
     <br />
     <a href="https://github.com/ChirpNest/ChirpNest/issues">Report Bug</a>
@@ -33,9 +31,9 @@
 * [Acknowledgements](#acknowledgements)
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![ChirpNestIntro](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNestIntroSmall.gif)
 
 [TODO]
 
