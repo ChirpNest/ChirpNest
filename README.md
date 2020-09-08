@@ -261,8 +261,8 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/ChirpNest/
 ## Acknowledgements
 
 * [Orne Brocaar](https://github.com/brocaar) built [ChirpStack](https://github.com/brocaar/chirpstack-network-server) which is a core component of ChirpNest
-* [Ecoliat](https://github.com/Ecoliat) - Co-author and developer of the ChirpNest diploma thesis
-* [LukasRas](https://github.com/LukasRas) - Co-author and developer of the ChirpNest diploma thesis
+* [Ecoliat](https://github.com/Ecoliat) - Co-author and developer of the [ChirpNest bachelor's thesis](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/BA20_ruan_04_Public_Version.pdf)
+* [LukasRas](https://github.com/LukasRas) - Co-author and developer of the [ChirpNest bachelor's thesis](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/BA20_ruan_04_Public_Version.pdf)
 
 
 
