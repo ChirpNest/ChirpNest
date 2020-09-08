@@ -146,8 +146,8 @@ Navigate to “Device-profiles”, click the “+ Create” button, enter the fo
 * Codec
   * Payload codec: select “Custom JavaScript codec functions”
   * Decode function:
-paste the decode function, see “Decode function for ADT1” on page 119
-make sure the function signature is function Decoder(port, bytes)
+The [decode function](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).
+Important: ChirpStack required another function signature than "The Things Network". For this reason, function Decoder(bytes, **port**) has to be changed to function Decoder(**port**, bytes). Copy the [source code](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) and change the function signature.
 * Encode function:
 leave unchanged
 
@@ -256,15 +256,6 @@ MD5 :  0bd45ecdd3d6b7956560e0121a18f577
 
 #### G2B. Build 'KIWI Server' module
 See https://github.com/ChirpNest/KIWIServer
-
-### How to decode 
-The decode function is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).
-
-Follow this URL:
-https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js
-
-Important: ChirpStack required another function signature than "The Things Network". For this reason, function Decoder(bytes, **port**) has to be changed to function Decoder(**port**, bytes).
-
 
 <!-- LICENSE -->
 ## License
