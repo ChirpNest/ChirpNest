@@ -45,7 +45,7 @@
 *Standard LoRaWAN solution with Internet*  
 
 ![with ChirpNest](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/IoT-with-LoRaWAN-without-internet.png "with ChirpNest")  
-*Standard LoRaWAN solution without Internet but with ChipNest*  
+*LoRaWAN solution without Internet but with ChipNest*  
 
 ![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.png "architecture")  
 *Detailed view of ChirpNests components*  
