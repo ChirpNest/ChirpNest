@@ -43,7 +43,10 @@
 
 
 ![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.jpg "architecture")
-ChirpNest is a SW that runs on a "LORIX One" gateway. ChirpNest uses [ChirpStack](www.chirpstack.io) as a LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration. Data from known LoRaWAN devices (right now LoRaWAN devices from KELLER are supported only) are stored into a local PostgreSQL DB. A module called "[KIWI Server](https://github.com/ChirpNest/KIWIServer)" offers a API to gather the measurement data from the DB. A Windows tool "[KIWI Desktop](https://github.com/ChirpNest/KIWIDesktop)" can load the data, visualize, delete or expor tthe data.
+ChirpNest is a SW that runs on a "LORIX One" gateway. ChirpNest uses [ChirpStack](www.chirpstack.io) as a LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration.  
+Data from known LoRaWAN devices (right now LoRaWAN devices from [KELLER](https://keller-druck.com/en/products/wireless-solutions/remote-transmission-units/adt1-tube) are supported only) are stored into a local PostgreSQL DB.  
+A module called "[KIWI Server](https://github.com/ChirpNest/KIWIServer)" offers a API to gather the measurement data from the DB.  
+A Windows tool "[KIWI Desktop](https://github.com/ChirpNest/KIWIDesktop)" can load the data, visualize, delete or expor the data.
 
 ## Getting Started
 Follow this guide to set up and start with ChirpNest
@@ -64,7 +67,11 @@ Follow this guide to set up and start with ChirpNest
 * Local network that allows communication between the computer and the LORIX One
 
 ### A. Get prepared ChirpNest image
-[TODO]
+You can build your own image. Alternatively, you can also download and use a working prebuild image from here:  
+File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)
+Size:  115MB
+MD5 :  cbc2688b0163f74ceeef5010af41c8df
+You have to unzip the image.
 
 ### B. Prepare the LORIX One device
 Insert the SD card into the computer and flash the ChirpNest image onto it using the third-party flashing software.
