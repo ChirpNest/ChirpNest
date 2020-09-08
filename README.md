@@ -28,7 +28,7 @@
   * [B. Prepare the LORIX One device](#b-prepare-the-lorix-one-device)
   * [C. Initial setup LORIX One with the ChirpStack web interface](#c-initial-setup-lorix-one-with-the-chirpStack-web-interface)
   * [D. Configure ChirpNest with the ChirpStack Web Interface](#d-configure-chirpnest-with-the-chirpStack-web-interface)
-  * [E. Configure ADT1 Device](#e-configure-adt1-device)
+  * [E. Configure ADT1 device](#e-configure-adt1-device)
   * [F. Connect KIWI Desktop with ChirpNest](#f-connect-kiwi-desktop-with-chirpnest)
   * [G. Build your own ChirpNest image](#g-build-your-own-chirpnest-image)
     * [G1. Create ChirpNest image](#g1-create-chirpnest-image)
