@@ -68,10 +68,10 @@ Follow this guide to set up and start with ChirpNest
 
 ### A. Get prepared ChirpNest image
 You can build your own image. Alternatively, you can also download and use a working prebuild image from here:  
-File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)
-Size:  115MB
-MD5 :  cbc2688b0163f74ceeef5010af41c8df
-You have to unzip the image.
+File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)  
+Size:  115MB  
+MD5 :  cbc2688b0163f74ceeef5010af41c8df  
+You have to unzip the image.  
 
 ### B. Prepare the LORIX One device
 Insert the SD card into the computer and flash the ChirpNest image onto it using the third-party flashing software.
