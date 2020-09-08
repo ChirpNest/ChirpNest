@@ -248,9 +248,14 @@ $	ls -l ./deploy/wifx/lorix-one-512-sd/3.2.0test1/
 ```
 
 #### G2A. Use prepared 'KIWI Server' module
-[TODO]
+You can build your own image (See [G2B. Build 'KIWI Server' module](#g2b-build-kiwi-server-module)). Alternatively, you can use the one in the prepared image.  
+Or, you can also download and use a working prebuild module from here:  
+File:  ["kiwi-server_2020-06-04_11-23_linux_arm_7.tar"](http://www.keller-druck2.ch/swupdate/ChirpNest/kiwi-server_2020-06-04_11-23_linux_arm_7.tar)  
+Size:  17.7MB  
+MD5 :  0bd45ecdd3d6b7956560e0121a18f577  
+
 #### G2B. Build 'KIWI Server' module
-[TODO]
+See https://github.com/ChirpNest/KIWIServer
 
 ### How to decode 
 The decode function is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).
