@@ -39,9 +39,17 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-[![Intro](http://img.youtube.com/vi/TjCiR6i7mAU/0.jpg)](https://www.youtube.com/watch?v=0EbmBN93py0 "Intro")
+[![Intro](http://img.youtube.com/vi/TjCiR6i7mAU/0.jpg)](https://www.youtube.com/watch?v=0EbmBN93py0 "Intro")  
 
-![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.jpg "architecture")
+![with Internet](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/IoT-with-LoRaWAN "with Internet")  
+*Standard LoRaWAN solution with Internet*  
+
+![with ChirpNest](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/IoT-with-LoRaWAN-without-internet.png "with ChirpNest")  
+*Standard LoRaWAN solution without Internet but with ChipNest*  
+
+![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.png "architecture")  
+*Detailed view of ChirpNests components*  
+
 ChirpNest is a SW that runs on a "LORIX One" gateway. ChirpNest uses [ChirpStack](www.chirpstack.io) as a LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration.  
 Data from known LoRaWAN devices (right now LoRaWAN devices from [KELLER](https://keller-druck.com/en/products/wireless-solutions/remote-transmission-units/adt1-tube) are supported only) are stored into a local PostgreSQL DB.  
 A module called "[KIWI Server](https://github.com/ChirpNest/KIWIServer)" offers a API to gather the measurement data from the DB.  
