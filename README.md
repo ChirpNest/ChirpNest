@@ -57,7 +57,7 @@ Follow this guide to set up and start with ChirpNest
 * LORIX One with power over ethernet cable (See https://www.lorixone.io/)
   * Power supply
 * SD card (minimum 8 GB, 10 MB/s writing speed or more recommended)
-* ChirpNest image file for LORIX One (See **TODO**)
+* ChirpNest image file for LORIX One (See [A. Get prepared ChirpNest image](#a-get-prepared-ChirpNest-image))
 * KELLER's [ADT1-Tube](https://keller-druck.com/en/products/data-loggers/remote-transmission-units-with-data-logger/adt1-tube) or [ADT1-Box](https://keller-druck.com/en/products/data-loggers/remote-transmission-units-with-data-logger/adt1-box) LoRaWAN device with sensor/s attached
 * Computer with
   * SD card reader
@@ -67,44 +67,45 @@ Follow this guide to set up and start with ChirpNest
 * Local network that allows communication between the computer and the LORIX One
 
 ### A. Get prepared ChirpNest image
-You can build your own image. Alternatively, you can also download and use a working prebuild image from here:  
-File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)  
-Size:  115MB  
-MD5 :  cbc2688b0163f74ceeef5010af41c8df  
+You can build your own image. Alternatively, you can also download and use a working prebuild image from here:    
+  File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)  
+  Size:  115MB  
+  MD5 :  cbc2688b0163f74ceeef5010af41c8df  
 You have to unzip the image.  
 
 ### B. Prepare the LORIX One device
-Insert the SD card into the computer and flash the ChirpNest image onto it using the third-party flashing software.
-Connect the LORIX One to the local network, put the SD card into the LORIX One and power it.
+1. Insert the SD card into the computer and flash the ChirpNest image onto it using the third-party flashing software.  
+2. Connect the LORIX One to the local network, put the SD card into the LORIX One and power it.  
 
 ### C. Initial setup LORIX One with the ChirpStack web interface
-Discover the IP address of the LORIX One e.g. through a web interface on the router.
-Connect to the LORIX One using an SSH client.
-Username: “admin”
-Password: “admin”
-In Windows 10, PowerShell can be used with the following command (replace “IP_Address” with the actual IP address of the LORIX One):
+1. Discover the IP address of the LORIX One e.g. through a web interface on the router.  
+2. Connect to the LORIX One using an SSH client.  
+    Username: “admin”  
+    Password: “admin”  
+   In Windows 10, PowerShell can be used with the following command (replace “IP_Address” with the actual IP address of the LORIX One):  
 ```sh
 ssh admin@IP_Address
 ```
-When connected to the LORIX One, type the following command:
+  When connected to the LORIX One, type the following command:  
 ```sh
 sudo gateway-config
 ```
-Enter the password “admin” again when prompted.
+  Enter the password “admin” again when prompted.  
 
-Select “Configure channel-plan” using the arrow buttons and enter.
-Select “EU868 4dBi (outdoor)”.
-Confirm the following four messages with enter.
-Select “Quit”.
-Check if date and time are correct with the following command:
+3. Select “Configure channel-plan” using the arrow buttons and enter.
+  Select “EU868 4dBi (outdoor)”.
+  Confirm the following four messages with enter.
+  Select “Quit”.
+
+4. Check if date and time are correct with the following command:
 ```sh
 $	date
 ```
-If date and time are not correct, set it with the following command (enter the current UTC time):
+  If date and time are not correct, set it with the following command (enter the current UTC time):
 ```sh
 $	sudo date -s '2020-06-09 07:10:00'
 ```
-Terminate the SSH connection by entering the following command:
+5. Terminate the SSH connection by entering the following command:
 ```sh
 exit
 ```
