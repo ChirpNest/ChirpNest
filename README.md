@@ -117,64 +117,64 @@ exit
   Password: “admin”  
 
 3. Navigate to “Network-servers”, click the “+ Add” button, enter the following data and click “Add network-server”:  
-  * General
-    * Network-server name: “ChirpNest-Network-Server”
-    * Network-server server: “localhost:8000”
-  * Gateway discovery
-    * leave all fields unchanged
-  * TLS certificates
-    * leave all fields unchanged
+    * General
+      * Network-server name: “ChirpNest-Network-Server”
+      * Network-server server: “localhost:8000”
+    * Gateway discovery
+      * leave all fields unchanged
+    * TLS certificates
+      * leave all fields unchanged
 
 4. Navigate to “Service-profiles”, click the “+ Create” button, enter the following data and click “Create service-profile”:  
-  * Service-profile name: “ChirpNest-Service-Profile”
-  * Network-server: select “ChirpNest-Network-Server”
-  * Remaining fields: leave unchanged
+    * Service-profile name: “ChirpNest-Service-Profile”
+    * Network-server: select “ChirpNest-Network-Server”
+    * Remaining fields: leave unchanged
 
 5. Navigate to “Device-profiles”, click the “+ Create” button, enter the following data and click “Create device-profile” (the following parameters are chosen specifically for and tested with the ADT1; using OTAA instead of ABP should also be possible):
-  * General
-    * Device-profile name: “device_profile_1.0.2_B_abp_ADT1”
-    * Network-server: select “ChirpNest-Network-Server”
-    * LoRaWAN MAC version: select “1.0.2”
-    * LoRaWAN Regional Parameters revision: select “B”
-    * remaining fields: leave unchanged
-  * Join (OTAA / ABP)
-    * leave all fields unchanged
-  * Class-B
-    * leave all fields unchanged
-  * Class-C
-    * leave all fields unchanged
-  * Codec
-    * Payload codec: select “Custom JavaScript codec functions”
-    * Decode function:
+    * General
+      * Device-profile name: “device_profile_1.0.2_B_abp_ADT1”
+      * Network-server: select “ChirpNest-Network-Server”
+      * LoRaWAN MAC version: select “1.0.2”
+      * LoRaWAN Regional Parameters revision: select “B”
+      * remaining fields: leave unchanged
+    * Join (OTAA / ABP)
+      * leave all fields unchanged
+    * Class-B
+      * leave all fields unchanged
+    * Class-C
+      * leave all fields unchanged
+    * Codec
+      * Payload codec: select “Custom JavaScript codec functions”
+      * Decode function:
 6. The [decode function](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).  
 Important: ChirpStack required another function signature than "The Things Network". For this reason, function Decoder(bytes, **port**) has to be changed to function Decoder(**port**, bytes).  
-  * Copy the [source code](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) and change the function signature.  
-  * Encode function: leave unchanged
+    * Copy the [source code](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) and change the function signature.  
+    * Encode function: leave unchanged
 
 7. Navigate to “Applications”, click the “+ Create” button, enter the following data and click “Create application”:
-  * Application name: “ChirpNest-Application”
-  * Application description: “This is the single application configured on this ChirpNest environment.”
-  * Service-profile: select “ChirpNest-Service-Profile”
+    * Application name: “ChirpNest-Application”
+    * Application description: “This is the single application configured on this ChirpNest environment.”
+    * Service-profile: select “ChirpNest-Service-Profile”
 
 8. Navigate to “Applications”, select the single existing application “ChirpNest-Application” (click on the name) which navigates to the “Devices” tab of that application, then click the “+ Create” button, enter the following data and click “Create device”:
 
-  * General
-    * Device name: enter any name consisting of letters, numbers and hyphens (e.g. “ADT1­No­92” where 92 is the serial number)
-    * Device description: enter any description (e.g. “ADT1 with serial number 92”)
-    * Device EUI: enter the device EUI of your device (e.g. “00 9D 6B 00 00 C5 D2 4F”)
-    * Device-profile: select “device_profile_1.0.2_B_abp_ADT1”
-    * Disable frame-counter validation: check
-  * Variables
+    * General
+      * Device name: enter any name consisting of letters, numbers and hyphens (e.g. “ADT1­No­92” where 92 is the serial number)
+      * Device description: enter any description (e.g. “ADT1 with serial number 92”)
+      * Device EUI: enter the device EUI of your device (e.g. “00 9D 6B 00 00 C5 D2 4F”)
+      * Device-profile: select “device_profile_1.0.2_B_abp_ADT1”
+      * Disable frame-counter validation: check
+    * Variables
+      * leave unchanged
+      *	Tags
     * leave unchanged
-    *	Tags
-  * leave unchanged
 
 9. Navigate to “Applications”, select the single existing application “ChirpNest-Application” (click on the name) which navigates to the “Devices” tab of that application, select the single existing device just created before (click on the name), switch to the “Activation” tab, enter the following data and click “(Re)activate device”:
-  * Device address: Enter the device address of your device (e.g. “26 01 16 83”) or click the round arrow to generate a new device address which must then be configured on the ADT1
-  * Network session key (LoRaWAN 1.0): Enter the network session key of your device (e.g. “E6 19 A5 8F 1F 1F 84 F2 C3 0B 2E EA 1E 1F B4 7D”) or click the round arrow to generate a new network session key which must then be configured on the ADT1
-  * Application session key (LoRaWAN 1.0): Enter the application session key of your device (e.g. “F5 32 68 0E C0 4C C4 95 7D AA FC 5E 34 CC 6E 35”) or click the round arrow to generate a new application session key which must then be configured on the ADT1
-  * Uplink frame-counter: leave “0”
-  * Downlink frame-counter: leave “0”
+    * Device address: Enter the device address of your device (e.g. “26 01 16 83”) or click the round arrow to generate a new device address which must then be configured on the ADT1
+    * Network session key (LoRaWAN 1.0): Enter the network session key of your device (e.g. “E6 19 A5 8F 1F 1F 84 F2 C3 0B 2E EA 1E 1F B4 7D”) or click the round arrow to generate a new network session key which must then be configured on the ADT1
+    * Application session key (LoRaWAN 1.0): Enter the application session key of your device (e.g. “F5 32 68 0E C0 4C C4 95 7D AA FC 5E 34 CC 6E 35”) or click the round arrow to generate a new application session key which must then be configured on the ADT1
+    * Uplink frame-counter: leave “0”
+    * Downlink frame-counter: leave “0”
 
 10. Now the ADT1 is configured and activated. You can verify by opening the “Device data” tab on your newly created device configuration and then sending a measurement packet (see “Configure ADT1 Device” below). Note that the “Device data” tab must be opened before the measurement is sent.
 
@@ -182,52 +182,53 @@ Important: ChirpStack required another function signature than "The Things Netwo
 
 ### E. Configure ADT1 Device
 This section explains how the required parameters “device EUI”, “device address”, “network session key” and “application session key” can be read out and/or configured.
-The software “GSM setup for remote transmission units” needs to be installed on the Windows computer. It can be downloaded from here:
+1. The software “GSM setup for remote transmission units” needs to be installed on the Windows computer. It can be downloaded from here:
 https://keller-druck.com/en/products/software/desktop-applications/gsm-setup-for-remote-transmission-units
-Connect the ADT1 device to the Windows computer using a Micro USB cable.
-Select the corresponding COM port and press the “Read Configuration” button (see screenshot).
+2. Connect the ADT1 device to the computer using a Micro-USB-cable.
+3. Select the corresponding COM port and press the “Read Configuration” button (see screenshot).
 
 ![press the “Read Configuration” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-01.jpg "press the “Read Configuration” button")
 
-To read out or configure said parameters, switch to the “LoRa Settings” tab. The parameters are then displayed (see screenshot). To configure the parameters, select “ABP” as “Activation Methode” and enter the parameters. Press the “Write Configuration” button after entering the parameters.
-
+4. To read out or configure said parameters, switch to the “LoRa Settings” tab. The parameters are then displayed (see screenshot).  
+    - To configure the parameters, select “ABP” as “Activation Methode” and enter the parameters. 
+    - Press the “Write Configuration” button after entering the parameters.
 ![Press the “Write Configuration” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-02.jpg "Press the “Write Configuration” button")
 
-To send the information packet from the ADT1 device, switch to the “Error/Status” tab and press the “Send Info LoRa” button (see screenshot).
+5. To send the information packet from the ADT1 device, switch to the “Error/Status” tab and press the “Send Info LoRa” button (see screenshot).
 
 ![press the “Send Info LoRa” button](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/gsm-setup-03.jpg "press the “Send Info LoRa” button")
 
-To manually trigger sending a measurement packet, the button “Send Measure-Data LoRa” can be pressed.
+6. To manually trigger sending a measurement packet, the button “Send Measure-Data LoRa” can be pressed.
 
 ### F. Connect KIWI Desktop with ChirpNest
 When ChirpNest is set up, KIWI Desktop can simply be connected to ChirpNest by entering the IP address of the LORIX One.
 
 ### G. Build your own ChirpNest image
 #### G1. Create ChirpNest image
-Navigate to the folder where the repository should be created and clone it:
+1. Navigate to the folder where the repository should be created and clone it:
 
 ```sh
 $	git clone https://github.com/ChirpNest/ChirpNest
 ```
-Run the following commands:
+2. Run the following commands:
 ```sh
 $	make submodules
 $	make permissions
 $	sudo docker-compose run --rm busybox
 ```
-(indented commands are to be run within the docker machine)
+  (indented commands are to be run within the docker machine)
 ```sh
     $	chown 999:999 /build
     $	exit
 $ sudo docker-compose run --rm yocto bash
     $	source oe-init-build-env /build/ /chirpstack-gateway-os/bitbake/
 ``` 
-   The configurations should already be correct. However, if a configuration needs to be edited, now is the moment to do that. 
+3. The configurations should already be correct. However, if a configuration needs to be edited, now is the moment to do that. 
 ```sh
     $	nano conf/local.conf
     $	nano conf/bblayers.conf
 ```
-   Run the following command to start creating the image:
+4. Run the following command to start creating the image:
 ```sh
     $	bitbake chirpstack-gateway-os-full
 ```
@@ -236,7 +237,7 @@ $ sudo docker-compose run --rm yocto bash
     $	/chirpstack-gateway-os/scripts/chirpstack-prepare-deploy
     $	exit
 ```
-Now, the file ending with .sdimg.gz is the image file. It’s located here:
+5. Now, the file ending with .sdimg.gz is the image file. It’s located here:
 ```sh
 $	ls -l ./deploy/wifx/lorix-one-512-sd/3.2.0test1/
 ```
