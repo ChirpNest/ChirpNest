@@ -39,8 +39,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-[![Intro](http://img.youtube.com/vi/TjCiR6i7mAU/0.jpg)](https://www.youtube.com/watch?v=TjCiR6i7mAU "Intro")
-
+[![Intro](http://img.youtube.com/vi/0EbmBN93py0/0.jpg)](https://www.youtube.com/watch?v=0EbmBN93py0 "Intro")
 
 ![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.jpg "architecture")
 ChirpNest is a SW that runs on a "LORIX One" gateway. ChirpNest uses [ChirpStack](www.chirpstack.io) as a LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration.  
