@@ -35,6 +35,7 @@
     * [G2A. Use prepared 'KIWI Server' module](#g2a-use-prepared-kiwi-server-module)
     * [G2B. Build 'KIWI Server' module](#g2b-build-kiwi-server-module)
   * [How to decode](#how-to-decode)
+* [Limitations](#limitations)
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
 
@@ -50,7 +51,7 @@
 ![architecture](https://github.com/ChirpNest/ChirpNest/blob/master/documentation/architecture.png "architecture")  
 *Detailed view of ChirpNests components*  
 
-ChirpNest is a SW that runs on a "LORIX One" gateway. ChirpNest uses [ChirpStack](www.chirpstack.io) as a LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration.  
+ChirpNest is a collection of configured software components that runs on a "LORIX One" gateway. Main component of ChirpNest is [ChirpStack](www.chirpstack.io) with its open-source LoRa Network Server plus its well-designed components such as user-friendly web-interface for device management and APIs for integration.  
 Data from known LoRaWAN devices (right now LoRaWAN devices from [KELLER](https://keller-druck.com/en/products/wireless-solutions/remote-transmission-units/adt1-tube) are supported only) are stored into a local PostgreSQL DB.  
 A module called "[KIWI Server](https://github.com/ChirpNest/KIWIServer)" offers a API to gather the measurement data from the DB.  
 A Windows tool "[KIWI Desktop](https://github.com/ChirpNest/KIWIDesktop)" can load the data, visualize, delete or expor the data.
@@ -258,6 +259,13 @@ MD5 :  0bd45ecdd3d6b7956560e0121a18f577
 
 #### G2B. Build 'KIWI Server' module
 See https://github.com/ChirpNest/KIWIServer
+
+
+## Limitations
+- Right now the project has a rather proof-of-concept character. It works with a couple of devices but has to be stress tested in with >50 LoRaWAN devices.  
+- Currently, only KELLER devices are supported. It would be nice to have a general approach to store, visualize and export all kinds of devices and measurment data.  
+- Therefore, the KIWI Desktop tool (Windows only) has much potential to improve.  
+- Hardware limitation of the "LORIX One" [limit the possibilities](https://forum.chirpstack.io/t/running-grafana-or-other-web-visualization-tool-on-lorix-one/8270) of having for example a graphical web interface to visualize the data and make it exportable (eg. Grafana)  
 
 <!-- LICENSE -->
 ## License
