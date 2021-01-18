@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ChirpNest/ChirpNest">
-    <img src="logo.jpg" alt="Logo" width="100" height="112">
+    <img src="Logo_ChirpNest_transparenter_Hintergrund.png" alt="Logo" width="100" height="112">
   </a>
 
   <h3 align="center">ChirpNest</h3>
