@@ -154,9 +154,9 @@ exit
     * Codec
       * Payload codec: select “Custom JavaScript codec functions”
       * Decode function:
-6. The [decode function](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).  
+6. The [decode function](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/ttn-v2-payload-decoder.js) is provided by KELLER in a [GitHub repository](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder).  
 Important: ChirpStack required another function signature than "The Things Network". For this reason, function Decoder(bytes, **port**) has to be changed to function Decoder(**port**, bytes).  
-    * Copy the [source code](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/PayloadDecoderFunction.js) and change the function signature.  
+    * Copy the [source code](https://github.com/KELLERAGfuerDruckmesstechnik/KellerAgTheThingsNetworkPayloadDecoder/blob/master/ttn-v2-payload-decoder.js) and change the function signature.  
     * Encode function: leave unchanged
 
 7. Navigate to “Applications”, click the “+ Create” button, enter the following data and click “Create application”:
