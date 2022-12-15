@@ -76,9 +76,9 @@ Follow this guide to set up and start with ChirpNest
 
 ### A. Get prepared ChirpNest image
 You can build your own image. Alternatively, you can also download and use a working prebuild image from here:    
-  File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/chirpstack.zip)  
-  Size:  115MB  
-  MD5 :  cbc2688b0163f74ceeef5010af41c8df  
+  File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNest.zip)  
+  Size:  112MB  
+  MD5 :  942838CC9055BD625A542B8F5A9BF289  
 You have to unzip the image.  
 
 ### B. Prepare the LORIX One device
@@ -252,10 +252,6 @@ $	ls -l ./deploy/wifx/lorix-one-512-sd/3.2.0test1/
 
 #### G2A. Use prepared 'KIWI Server' module
 You can build your own image (See [G2B. Build 'KIWI Server' module](#g2b-build-kiwi-server-module)). Alternatively, you can use the one in the prepared image.  
-Or, you can also download and use a working prebuild module from here:  
-File:  ["kiwi-server_2020-06-04_11-23_linux_arm_7.tar"](http://www.keller-druck2.ch/swupdate/ChirpNest/kiwi-server_2020-06-04_11-23_linux_arm_7.tar)  
-Size:  17.7MB  
-MD5 :  0bd45ecdd3d6b7956560e0121a18f577  
 
 #### G2B. Build 'KIWI Server' module
 See https://github.com/ChirpNest/KIWIServer
