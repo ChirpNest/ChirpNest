@@ -76,7 +76,7 @@ Follow this guide to set up and start with ChirpNest
 
 ### A. Get prepared ChirpNest image
 You can build your own image. Alternatively, you can also download and use a working prebuild image from here:    
-  File:  ["chirpstack.zip"](http://www.keller-druck2.ch/swupdate/ChirpNest/ChirpNest.zip)  
+  File:  ["ChirpNest.zip"](https://keller-druck2.ch/swupdate/ChirpNest/ChirpNest.zip)  
   Size:  112MB  
   MD5 :  942838CC9055BD625A542B8F5A9BF289  
 You have to unzip the image.  
